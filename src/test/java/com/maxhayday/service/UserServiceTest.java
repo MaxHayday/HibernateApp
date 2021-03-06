@@ -2,6 +2,9 @@ package com.maxhayday.service;
 
 import com.maxhayday.Connection;
 import com.maxhayday.data.UserTestData;
+import com.maxhayday.model.Post;
+import com.maxhayday.model.Region;
+import com.maxhayday.model.Role;
 import com.maxhayday.model.User;
 import com.maxhayday.repository.UserRepository;
 import com.maxhayday.repository.hbn.HBUserRepositoryImpl;
@@ -14,6 +17,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +30,7 @@ class UserServiceTest {
 
     private UserService userService;
     private RegionService regionService;
-    private Transaction transaction = null;
+    //private Transaction transaction = null;
     private UserTestData userTestData;
 
     public UserServiceTest() throws SQLException, IOException, ClassNotFoundException, ParseException {
@@ -36,7 +40,7 @@ class UserServiceTest {
     }
 
     @BeforeAll
-    static void setUp(){
+    static void setUp() {
         Connection.buildSession();
     }
 
@@ -74,6 +78,5 @@ class UserServiceTest {
     @AfterAll
     public static void tearDown() {
         if (Connection.sessionFactory != null) Connection.sessionFactory.close();
-        System.out.println("SessionFactory destroyed");
     }
 }

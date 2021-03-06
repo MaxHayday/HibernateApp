@@ -64,6 +64,5 @@ class PostServiceTest {
     @AfterAll
     public static void tearDown() {
         if (Connection.sessionFactory != null) Connection.sessionFactory.close();
-        System.out.println("SessionFactory destroyed");
     }
 }

@@ -17,7 +17,7 @@ public class RegionTestData {
     }
 
     public static Region expectedCreatedDataOfRegion() {
-        Region region = new Region(3L, "POL");
+        Region region = new Region(4L, "POL");
         return region;
     }
 
@@ -33,6 +33,7 @@ public class RegionTestData {
         regions.add(region);
         region = new Region(2L, "IRL");
         regions.add(region);
+        region = new Region(3l,"POL");
         return regions;
     }
 }

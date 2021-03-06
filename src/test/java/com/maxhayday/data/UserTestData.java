@@ -76,7 +76,7 @@ public class UserTestData {
 
     public static User expectedDataOfUserGetById() {
         List<Post> postList = new ArrayList<>();
-        Post post1 = new Post(1L, "Post 1 of Max", Timestamp.valueOf("2021-01-03 8:43:10"), Timestamp.valueOf("2021-01-03 8:43:10"));
+        Post post1 = new Post(1L, "Post 1 of Max", Timestamp.valueOf("2021-03-04 21:53:52.0"), Timestamp.valueOf("2021-03-04 21:53:52.0"));
         postList.add(post1);
         Region region = new Region(1L, "UKR");
         User user = new User(1l, "Max", "Hayday", postList, region, Role.USER);
@@ -89,7 +89,7 @@ public class UserTestData {
         List<Post> postList = new ArrayList<>();
         Region region = new Region(1l, "UKR");
         User user = new User(1l, "Max", "Hayday", null, region, Role.USER);
-        Post post1 = new Post(1l, "Post 1 of Max", Timestamp.valueOf("2021-03-02 11:16:20"), Timestamp.valueOf("2021-03-02 11:16:20"), user);
+        Post post1 = new Post(1l, "Post 1 of Max", Timestamp.valueOf("2021-03-04 21:53:52.0"), Timestamp.valueOf("2021-03-04 21:53:52.0"), user);
         postList.add(post1);
         user.setPosts(postList);
         users.add(user);
@@ -98,7 +98,7 @@ public class UserTestData {
         region = new Region(2l, "IRL");
         user = new User(2l, "Ola", "Hayday", null, region, Role.USER);
 
-        post1 = new Post(2l, "Post 1 of Ola", Timestamp.valueOf("2021-03-02 11:16:44"), Timestamp.valueOf("2021-03-02 11:16:44"), user);
+        post1 = new Post(2l, "Post 1 of Ola", Timestamp.valueOf("2021-03-04 21:53:52.0"), Timestamp.valueOf("2021-03-04 21:53:52.0"), user);
         postList.add(post1);
         user.setPosts(postList);
         users.add(user);

@@ -28,7 +28,7 @@ CREATE TABLE public.posts
     id      serial                                                       not null,
     content VARCHAR(255)                                                 NOT NULL,
     created TIMESTAMP(0) DEFAULT date_trunc('second', current_timestamp) NOT NULL,
-    updated TIMESTAMP(0)                                                 NOT NULL,
+    updated TIMESTAMP(0) DEFAULT date_trunc('second', current_timestamp) NOT NULL,
     user_id BIGINT                                                       NULL,
     CONSTRAINT post_pkey PRIMARY KEY (id),
     CONSTRAINT fk_post FOREIGN KEY (user_id)
